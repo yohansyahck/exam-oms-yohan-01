@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Yohansyahck\ExamOms\Model\Resolver;
+namespace Exam\Oms\Model\Resolver;
 
 use Magento\Framework\GraphQl\Config\Element\Field;
 use Magento\Framework\GraphQl\Query\ResolverInterface;
@@ -19,7 +19,7 @@ use Swiftoms\General\Helper\GraphQlSearchCriteria;
 use Swiftoms\Product\Model\ProductRepository;
 use Magento\Catalog\Model\Product\Type;
 
-class GetProductList implements ResolverInterface
+class GetProduct implements ResolverInterface
 {
     /**
      * @var ProductRepository
