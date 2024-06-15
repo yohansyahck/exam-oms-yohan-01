@@ -1,0 +1,42 @@
+type Query {
+    getProductList(
+        search: String @doc(description: "Performs a full-text search using the specified key words.")
+        filter: ProductFilterInput @doc(description: "Identifies which product attributes to search for and return.")
+        sort: ProductSortInput @doc(description: "Specifies which attributes to sort on, and whether to return the results in ascending or descending order.")
+        pageSize: Int = 5 @doc(description: "Specifies the maximum number of results to return at once. This attribute is optional.")
+        currentPage: Int = 1 @doc(description: "Specifies which page of results to return. The default value is 1.")
+    ): ProductList
+    @resolver(class: "\\Swiftoms\\Product\\Model\\Resolver\\GetProductList") @doc(description: "The getProductList query returns the information about a shipment")
+}
+
+input ProductFilterInput {
+    entity_id: FilterRangeTypeInput @doc(description: "entity id product")
+    product_name: FilterTypeInput @doc(description: "product name")
+    sku: FilterTypeInput @doc(description: "sku product")
+    approval_status: FilterTypeInput @doc(description: "product approval status")
+    type_id: FilterTypeInput @doc(description: "product type")
+}
+
+input ProductSortInput {
+    entity_id: SortEnum @doc(description: "entity id product")
+    product_name: SortEnum @doc(description: "product name")
+    sku: SortEnum @doc(description: "sku product")
+    type_id: SortEnum @doc(description: "product type")
+}
+
+type ProductList {
+    items: [ProductOutput] @doc(description: "The array of the Product")
+    page_info: SearchResultPageInfo @doc(description: "An object that includes the page_info and currentPage values specified in the query.")
+    total_count: Int @doc(description: "The number of products returned.")
+}
+
+type ProductOutput {
+    entity_id: Int @doc(description: "entity id product")
+    name: String @doc(description: "product name")
+    sku: String @doc(description: "sku product")
+    product_price: String @doc(description: "product price")
+    product_special_price: String @doc(description: "product special price")
+    product_status: StatusOutput @doc(description: "product status")
+    approval_status: String @doc(description: "product approval status")
+    type_id: String @doc(description: "product type")
+}
