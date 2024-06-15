@@ -1,5 +1,5 @@
 type Query {
-    GetProductYohan(
+    getProductYohan(
         search: String @doc(description: "Performs a full-text search using the specified key words.")
         filter: ProductFilterInput @doc(description: "Identifies which product attributes to search for and return.")
         sort: ProductSortInput @doc(description: "Specifies which attributes to sort on, and whether to return the results in ascending or descending order.")
