@@ -13,7 +13,7 @@
             "src/exam-oms/registration.php"
         ],
         "psr-4": {
-            "Exam\\Oms\\": "src/exam-oms"
+            "Yohansyahck\\ExamOms\\": "src/exam-oms"
         }
     }
 }
