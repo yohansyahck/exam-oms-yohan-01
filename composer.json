@@ -9,9 +9,11 @@
         }
     ],
     "autoload": {
-        "files": [],
+        "files": [
+            "src/exam-oms/registration.php"
+        ],
         "psr-4": {
-            "Icube\\": ["src"]
+            "Yohansyahck\\ExamOms\\": "src/exam-oms"
         }
     }
 }
