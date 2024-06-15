@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace ExamOms\ExamOms\Model\Resolver;
+namespace Yohansyahck\ExamOms\Model\Resolver;
 
 use Magento\Framework\GraphQl\Config\Element\Field;
 use Magento\Framework\GraphQl\Query\ResolverInterface;
