@@ -1,0 +1,17 @@
+{
+    "name": "yohansyahck/exam-oms-yohan-01",
+    "type": "project",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "yohansyahck",
+            "email": "yohansyah.cahya@sirclo.com"
+        }
+    ],
+    "autoload": {
+        "files": [],
+        "psr-4": {
+            "Icube\\": ["src"]
+        }
+    }
+}
